@@ -11,7 +11,6 @@
       "Other"
     ],
     "logo": "https://raw.githubusercontent.com/mikestraney/portainer-templates/master/Images/adguard.png",
-    "administrator-only": false,
     "privileged": false,
     "interactive": false,
     "restart_policy": "unless-stopped",
@@ -42,6 +41,24 @@
     ],
     "labels": null,
     "env": [
+{
+  "name": "ADMINISTRATOR_ONLY",
+  "label": "Administrator Only Access",
+  "description": "Set to true if only administrators should have access.",
+  "select": [
+    {
+      "name": "Slået fra", 
+      "value": false,
+      "default": true,
+      "label": "Yes"
+    },
+    {
+      "name": "Slået Til", 
+      "value": true,
+      "label": "No"
+    }
+  ]
+}
       {
         "default": "1000",
         "label": "PUID",
